@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Header from "@/components/custom/Header";
 
-const manRope = Manrope({ subsets: ["latin"],  variable: "--font-manRope", });
+const manRope = Manrope({ subsets: ["latin"], variable: "--font-manRope" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body  className={cn(
+      <body
+        className={cn(
           "min-h-screen bg-background font-sans antialiased",
           manRope.variable
-        )}>{children}</body>
+        )}
+      >
+       <Header/>
+        <div className="main">{children}</div>
+      </body>
     </html>
   );
 }
