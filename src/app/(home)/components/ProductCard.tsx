@@ -36,7 +36,7 @@ const ProductCard = ({ product }: PropTypes) => {
           <span className="font-bold ml-1">₹{product.price}</span>
         </p>
         <Button className="bg-orange-200 hover:bg-orange-300 text-orange-500 shadow hover:shadow-lg px-6 py-2 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150">
-          Add to cart
+          choose
         </Button>
       </CardFooter>
     </Card>
